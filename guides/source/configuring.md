@@ -2036,10 +2036,9 @@ The default value depends on the `config.load_defaults` target version:
 
 Controls how Rails handles paths relative URL redirects.
 
-When set to `:log` (default), Rails will log a warning when a path relative URL redirect
-is detected. When set to `:notify`, Rails will publish an
-`unsafe_redirect.action_controller` notification event. When set to `:raise`, Rails
-will raise an `ActionController::Redirecting::UnsafeRedirectError`.
+When set to `:raise` (default), Rails will raise an `ActionController::Redirecting::UnsafeRedirectError`.
+When set to `:log`, Rails will log a warning when a path relative URL redirect is detected. 
+When set to `:notify`, Rails will publish an `unsafe_redirect.action_controller` notification event.
 
 This helps detect potentially unsafe redirects that could be exploited for open
 redirect attacks.
